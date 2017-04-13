@@ -9,7 +9,6 @@ $.each(channels, function getUsers(index, value) {
 			data: {format: "json", client_id: "m8s9p3rmmtcy0ob9673050zcok5rf7"},
 			dataType: "json",
 			error: function(xhr) {
-    					console.log(xhr);
 							if (xhr.responseJSON.status === 422 || xhr.responseJSON.status === 404) {
 								$(".streams").append(
 	    						"<tr class='table-danger'>" +
@@ -21,8 +20,6 @@ $.each(channels, function getUsers(index, value) {
 							} 
     				 },
 			success: function getStreams(userData) {
-    						console.log(userData);
-    						//logo = userData.logo;
 	    					$.ajax({
 									type: "GET",
 									url: "https://api.twitch.tv/kraken/streams/" + value,
@@ -32,7 +29,6 @@ $.each(channels, function getUsers(index, value) {
 													
 						    				 },
 									success: function (streamData) {
-														console.log(streamData);
 														if (streamData.stream === null) {
 							    						$(".streams").append(
 								    						"<tr class='table-warning'>" +
