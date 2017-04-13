@@ -37,7 +37,11 @@ $.each(channels, function getUsers(index, value) {
 							    						$(".streams").append(
 								    						"<tr class='table-warning'>" +
 								    							"<td><img class='logo img-fluid img-thumbnail' src='" + userData.logo + "'></td>" +
-								    							"<td class='align-middle'><a class='text-warning' href='" + userData.url +"'>" + userData.display_name + "</a></td>" +
+								    							"<td class='align-middle'>" + 
+								    								"<a class='text-warning' href='https://www.twitch.tv/" + userData.name +"' target='_blank'>" + 
+								    										userData.display_name + 
+								    								"</a>" + 
+							    								"</td>" +
 								    							"<td class='align-middle'><p class='d-inline font-italic text-warning'>Offline</p></td>" +
 								    						"</tr>"
 							    						);
@@ -45,7 +49,11 @@ $.each(channels, function getUsers(index, value) {
 							    						$(".streams").append(
 								    						"<tr class='table-success'>" +
 								    							"<td><img class='logo img-fluid img-thumbnail' src='" + streamData.stream.channel.logo + "'></td>" +
-								    							"<td class='align-middle'><a class='text-success' href='" + streamData.stream.channel.url +"'>" + streamData.stream.channel.display_name + "</a></td>" +
+								    							"<td class='align-middle'>" + 
+								    								"<a class='text-success' href='" + streamData.stream.channel.url +"' target='_blank'>" + 
+								    									streamData.stream.channel.display_name + 
+							    									"</a>" + 
+						    									"</td>" +
 								    							"<td class='align-middle'><p class='d-inline font-italic text-success'>" + streamData.stream.channel.status + "</p></td>" +
 								    						"</tr>"
 								    					);	
